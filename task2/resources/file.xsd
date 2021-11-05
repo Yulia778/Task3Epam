@@ -1,0 +1,89 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="shop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="appliances">
+                    <xs:complexType>
+                        <xs:choice maxOccurs="unbounded">
+                            <xs:element name="Oven" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:float" name="price"/>
+                                        <xs:element type="xs:short" name="power_consumption"/>
+                                        <xs:element type="xs:byte" name="weight"/>
+                                        <xs:element type="xs:byte" name="capacity"/>
+                                        <xs:element type="xs:byte" name="depth"/>
+                                        <xs:element type="xs:float" name="height"/>
+                                        <xs:element type="xs:float" name="width"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Laptop" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:short" name="price"/>
+                                        <xs:element type="xs:short" name="battery_capacity"/>
+                                        <xs:element type="xs:string" name="os"/>
+                                        <xs:element type="xs:byte" name="memory_rom"/>
+                                        <xs:element type="xs:short" name="system_memory"/>
+                                        <xs:element type="xs:float" name="cpu"/>
+                                        <xs:element type="xs:float" name="display_inches"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Refrigerator" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:short" name="price"/>
+                                        <xs:element type="xs:short" name="power_consumption"/>
+                                        <xs:element type="xs:byte" name="weight"/>
+                                        <xs:element type="xs:byte" name="freezer_capacity"/>
+                                        <xs:element type="xs:short" name="overall_capacity"/>
+                                        <xs:element type="xs:short" name="height"/>
+                                        <xs:element type="xs:short" name="width"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="VacuumCleaner" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:short" name="price"/>
+                                        <xs:element type="xs:short" name="power_consumption"/>
+                                        <xs:element type="xs:string" name="filter_type"/>
+                                        <xs:element type="xs:string" name="bag_type"/>
+                                        <xs:element type="xs:string" name="wand_type"/>
+                                        <xs:element type="xs:short" name="motor_speed_regulation"/>
+                                        <xs:element type="xs:byte" name="cleaning_width"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="TabletPC" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:short" name="price"/>
+                                        <xs:element type="xs:short" name="battery_capacity"/>
+                                        <xs:element type="xs:byte" name="display_inches"/>
+                                        <xs:element type="xs:short" name="memory_rom"/>
+                                        <xs:element type="xs:byte" name="flash_memory_capacity"/>
+                                        <xs:element type="xs:string" name="color"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Speakers" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:short" name="price"/>
+                                        <xs:element type="xs:byte" name="power_consumption"/>
+                                        <xs:element type="xs:byte" name="number_of_speakers"/>
+                                        <xs:element type="xs:string" name="frequency_range"/>
+                                        <xs:element type="xs:byte" name="cord_length"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
